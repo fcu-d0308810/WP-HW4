@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("#button1").click(function(){
+                $("p:first").hide();
+              });
+              $("#button2").click(function(){
+                $("#p2").hide();
+              });
+              $("#button3").click(function(){
+                $(".p3").hide();
+              });
+              $("#button4").click(function(){
+                $("*p").show();
+              });
+            });
+        </script>
+    </head>
+    <body>
+      <p>Hello word1</p>
+      <p id="p2">Hello word2</p>
+      <p class="p3">Hello word3</p>
+      <button id="button1">Hidden first</button>
+      <button id="button2">Hidden second</button>
+      <button id="button3">Hidden third</button>
+      <button id="button4">show all</button>
+    </body>
+</html>
