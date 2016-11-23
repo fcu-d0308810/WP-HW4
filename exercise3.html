@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#left").click(function(){
+          $("#beauty").animate({left: '+=250px',opacity: '0.5'}, "slow").slideUp("slow").slideDown().animate({left: '+=250px',opacity: '1.0'},"slow");
+        });
+        $("#up").click(function(){
+          $("#beauty").animate({left: '-=500px'});
+        });
+        $("#down").click(function(){
+          $("#beauty").stop();
+        });
+        $("#right").click(function(){
+          var woman = $("#beauty");
+          woman.animate({height: '500px'},"slow");
+          woman.animate({width: '500px'},"slow");
+          woman.animate({height: '250px'},"slow");
+          woman.animate({width: '250px'},"slow");
+        });
+        $("#miss").click(function(){
+          $("#beauty").hide("slow",function(){
+            alert("你怎麼讓環奈消失了ＱＱ");
+          });
+        });
+        $("#show").click(function(){
+          $("#beauty").show("slow",function(){
+            alert("環奈出現了^_^");
+          });
+        });
+      });
+    </script>
+    <style>
+    #beauty{
+      position: fixed;
+      height: 250px;
+      width: 250px;
+    }
+    </style>
+  </head>
+  <body>
+    <div style="text-align:center;width:fill;height:100px;">
+　     <div style=";width:300px;height:20px;margin:0 auto;">
+        <button id="left">開始動作</button>
+        <button id="up">回去</button>
+        <button id="down">停止</button>
+        <button id="right">俏皮</button>
+        <button id="miss">消失</button>
+        <button id="show">出現</button>
+      </div>
+    </div>
+    <img src="beautiful.jpg" id="beauty" style="postion: relation;"></img>
+  </body>
+</html>
